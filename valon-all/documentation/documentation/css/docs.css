@@ -1,0 +1,249 @@
+body {
+    padding-top:50px;
+}
+
+/*Navigation Sidebar */
+
+#sidebar li {
+    margin: 0;
+}
+#sidebar li a {
+    display: block;
+    color: #777;
+    border-left: 1px solid rgba(0,0,0,0);
+    padding: 4px 4px 4px 20px;
+    text-decoration: none;
+    border-color: #eee;
+}
+
+#sidebar li ol {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    font-size: 13px;
+}
+
+    #sidebar li ol a {
+        padding-left: 37px;
+        color: #8a8a8a;
+    }
+    
+/*#sidebar > li:hover ol {
+    display: block;
+}*/
+
+#sidebar li.active > a {
+    border-color: #563D7C;  
+    color: #563D7C;
+    /*font-weight: bold;*/
+    color: #428BCA;
+    border-color: #428BCA;
+    border-width: 2px;
+}
+
+    #sidebar li.active ol {
+        display: block;
+    }
+    
+#sidebar li:not(.active) a:hover {
+    color: #563D7C;
+    border-color: #E5E3E9;
+    border-color: #428BCA;
+    color: #428BCA;
+    /*font-weight: bold;*/
+}
+
+#sidebar li a:hover {
+    background: none;
+}
+
+ol{
+    list-style-type:decimal;
+    counter-reset: item;
+    list-style-position: outside;
+}
+ol li {
+    /*display: block    */
+}
+ol#sidebar li a:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    color: #bbb !important;
+}
+
+#sidebar i {
+    margin:0 4px;
+    color: #bbb;
+}
+
+#sidebar.all-visible {
+    position: relative !important;
+}
+#sidebar.all-visible li ol {
+    display: block !important;
+}
+
+/*Content*/
+
+#content img {
+    max-width: 100%;
+    display: block;
+    padding: 8px;
+    border: 1px solid #e1e1e1;
+    background: #f4f4f4;
+    margin: 20px 0;
+}
+
+.navbar-right a {
+    padding-left: 33px !important;
+    margin-left: 10px;
+}
+
+    .support-link img {
+        position: absolute;
+        left: -4px;
+        top: 9px;
+        opacity: 0.6;
+    }
+    
+.navbar i {
+    font-size: 24px;
+    font-weight: 300;
+    position: absolute;
+    left: 0;
+    top: 13px;
+}
+
+.top-nav {
+    margin-top: 10px !important;
+}
+    
+    .extra-nav a {
+        border-color: rgba(0,0,0,0) !important;
+    }
+    
+    .toggle-all a:before,
+    .top-nav a:before {
+        display: none !important;
+    }
+
+p {
+    margin-bottom: 20px;
+    font-size: inherit;
+    line-height: 2em;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
+
+h1,h3 {
+    padding-top: 80px;
+    margin-top: -70px !important;
+    padding-bottom: 10px;
+}
+
+h3 {
+    border-bottom: 1px solid #EEE;
+}
+
+#masthead {
+    background-color: #eee;
+    padding: 80px 0 70px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    background-image: url(../images/header_pattern.jpg);
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#masthead:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(255,255,255,0.75);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#masthead .well {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 5px 0 10px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 2px;
+    border-color: rgba(227, 227, 227, 0.9);
+}
+
+footer {
+    background: #eee url(../img/header_pattern.jpg) repeat;
+    padding: 20px 0;
+    margin-top: 20px;
+    color: #888;
+    border-top: 1px solid #eee;
+    
+}
+
+ul.list-no-style {
+    list-style: none;
+}
+
+    ul.list-no-style li {
+        margin-bottom: 6px;
+    }
+
+.strong-highlight {
+    background: red;
+    color: #fff;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    text-align: center;
+    margin-right: 3px;
+}
+
+#masthead .well {
+    line-height: 1.9em;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #masthead h1 {
+        font-size: 50px;
+    }
+}
+
+.navbar-bright {
+    background-color:#111155;
+    color:#fff;
+}
+
+.affix-top,.affix{
+    position: static;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top:20px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:85px;
+  }
+}

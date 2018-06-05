@@ -2543,3 +2543,7 @@ article {
 .single-portfolio .project-content .title:after {
   content: normal;
 }
+
+.white-text{
+  color: whitesmoke;
+}
